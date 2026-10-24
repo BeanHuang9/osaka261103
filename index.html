@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>大阪神戶七日小旅行</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Huninn&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#FFFCF6;--ink:#3E3A39;--coral:#F2A497;--sun:#F6D27A;--sky:#A8D3E6;--green:#B9DAA5;--r:26px;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+html{scroll-padding-top:calc(72px + env(safe-area-inset-top,0px));scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Huninn","Noto Sans TC","PingFang TC",sans-serif;line-height:1.6;font-size:16px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--paper);z-index:30}
+nav{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:20;background:var(--paper);border-bottom:3px solid var(--ink);display:flex;gap:6px;padding:8px 10px;overflow-x:auto;justify-content:center}
+nav a{flex:none;color:var(--ink);text-decoration:none;border:3px solid var(--ink);border-radius:999px;padding:2px 14px;font-size:15px;background:var(--paper);transition:transform .2s}
+nav a:nth-child(1){background:var(--coral)}nav a:nth-child(2){background:var(--sun)}nav a:nth-child(3){background:var(--sky)}nav a:nth-child(4){background:var(--green)}nav a:nth-child(5){background:var(--coral)}
+nav a:nth-child(6){background:var(--sun)}nav a:active{transform:scale(.92)}
+main{max-width:720px;margin:0 auto;padding:78px 14px 40px}
+section{margin-top:34px}
+h1,h2,h3{margin:0}
+h2{font-size:24px;display:inline-block;background:var(--sun);border:3px solid var(--ink);border-radius:999px;padding:0 18px;margin-bottom:14px}
+.card{background:var(--paper);border:3px solid var(--ink);border-radius:var(--r);padding:16px}
+.hero{background:var(--sky);border:3px solid var(--ink);border-radius:32px;overflow:hidden;text-align:center}
+.hero svg{display:block;width:100%;height:auto}
+.hero .tx{background:var(--paper);border-top:3px solid var(--ink);padding:14px 12px 18px}
+h1{font-size:28px;line-height:1.3}
+.sub{margin:4px 0 12px;font-size:14px}
+.cd{display:flex;gap:8px;justify-content:center}
+.cd div{border:3px solid var(--ink);border-radius:18px;min-width:66px;padding:4px 6px;background:var(--coral)}
+.cd div:nth-child(2){background:var(--sun)}.cd div:nth-child(3){background:var(--green)}
+.cd b{display:block;font-size:26px;line-height:1.2}.cd span{font-size:12px}
+.cdn{margin-top:8px;font-size:14px}
+.fl{display:grid;gap:14px}
+.fl .card{padding:0;overflow:hidden}
+.fl h3{padding:6px 16px;border-bottom:3px solid var(--ink);font-size:19px;display:flex;align-items:center;gap:8px}
+.fl .row{padding:10px 16px;display:grid;grid-template-columns:auto 1fr;gap:2px 12px;align-items:center}
+.fl .row+.row{border-top:3px dashed var(--ink)}
+.lab{border:3px solid var(--ink);border-radius:999px;padding:0 10px;font-size:13px;background:var(--paper);grid-row:span 2}
+.tm{font-size:19px}.fn{font-size:13px}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding:4px 2px 10px}
+.tab{flex:none;font:inherit;color:var(--ink);background:var(--paper);border:3px solid var(--ink);border-radius:20px;padding:4px 12px;text-align:center;cursor:pointer;line-height:1.3;min-width:62px}
+.tab small{display:block;font-size:11px}.tab b{font-size:17px;font-weight:400}
+.tab[aria-selected=true]{background:var(--coral);animation:bounce .5s}
+.dh{border:3px solid var(--ink);border-radius:var(--r);background:var(--green);padding:10px 16px;margin-bottom:14px}
+.dh h3{font-size:20px}.dh p{margin:0;font-size:14px}
+.tl{list-style:none;margin:0;padding:0 0 0 22px;position:relative}
+.tl::before{content:"";position:absolute;left:9px;top:8px;bottom:8px;border-left:3px dashed var(--ink)}
+.tl li{position:relative;margin-bottom:12px;background:var(--paper);border:3px solid var(--ink);border-radius:20px;padding:8px 12px;animation:pop .5s backwards}
+.tl li::before{content:"";position:absolute;left:-23px;top:14px;width:15px;height:15px;border-radius:50%;background:var(--sun);border:3px solid var(--ink)}
+.tl li.must::before{background:var(--coral)}
+.tl .t{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.tl .n{font-size:17px}
+.tg{font-size:12px;border:2px solid var(--ink);border-radius:999px;padding:0 8px;line-height:1.5}
+.tg.walk{background:var(--green)}.tg.metro{background:var(--sky)}.tg.bus{background:var(--sun)}.tg.jr{background:var(--coral)}.tg.car{background:var(--paper)}
+.must-b{font-size:12px;background:var(--coral);border:2px solid var(--ink);border-radius:999px;padding:0 8px;line-height:1.5;display:inline-block;animation:wig 2.4s ease-in-out infinite}
+.tl .d{font-size:13px;margin-top:2px}
+.tg.st{background:#e3f1f8}
+.rec{margin-top:6px;border:2px dashed var(--ink);border-radius:14px;padding:4px 10px;font-size:13px;background:#fdf1d3}.rec b{font-weight:400;background:var(--green);border-radius:8px;padding:0 6px;margin-right:4px}
+.todo{list-style:none;padding:0;margin:0}
+.todo li{border-bottom:3px dashed var(--ink)}.todo li:last-child{border:0}
+.todo label{display:flex;gap:12px;align-items:center;padding:8px 0;cursor:pointer}
+.todo input{appearance:none;-webkit-appearance:none;width:26px;height:26px;flex:none;border:3px solid var(--ink);border-radius:9px;background:var(--paper);margin:0;cursor:pointer;display:grid;place-content:center}
+.todo input:checked{background:var(--green)}
+.todo input:checked::after{content:"✓";font-size:18px;line-height:1}
+.todo input:checked+span{text-decoration:line-through;opacity:.6}
+.prog{height:16px;border:3px solid var(--ink);border-radius:999px;margin-bottom:8px;overflow:hidden;background:var(--paper)}
+.prog i{display:block;height:100%;width:0;background:var(--coral);transition:width .4s}
+.hotel{background:var(--sun)}.tip{border:3px dashed var(--ink);border-radius:20px;padding:10px 14px;margin-top:14px;background:var(--paper);font-size:14px}.tip b{background:var(--sun);padding:0 6px;border-radius:8px;font-weight:400}.tip ul{margin:6px 0 0;padding-left:20px}
+.hotel h3{font-size:20px}
+.btn{display:inline-block;margin-top:10px;color:var(--ink);background:var(--paper);border:3px solid var(--ink);border-radius:999px;padding:2px 16px;text-decoration:none}
+footer{text-align:center;font-size:13px;padding:10px 0 24px}
+.drift{animation:drift 9s ease-in-out infinite alternate}
+.drift2{animation:drift 12s ease-in-out infinite alternate-reverse}
+.bob{animation:bob 3s ease-in-out infinite}
+.fly{animation:fly 6s ease-in-out infinite alternate}
+.train{animation:train 8s linear infinite}
+@keyframes drift{to{transform:translateX(26px)}}
+@keyframes bob{50%{transform:translateY(-5px)}}
+@keyframes fly{to{transform:translate(-22px,-8px)}}
+@keyframes train{from{transform:translateX(-120px)}to{transform:translateX(380px)}}
+@keyframes bounce{0%{transform:scale(.8)}50%{transform:scale(1.14)}75%{transform:scale(.96)}100%{transform:scale(1)}}
+@keyframes pop{0%{opacity:0;transform:translateY(18px) scale(.94)}60%{transform:translateY(-4px) scale(1.02)}100%{opacity:1;transform:none}}
+@keyframes wig{0%,80%,100%{transform:rotate(0)}85%{transform:rotate(-6deg)}92%{transform:rotate(6deg)}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<nav aria-label="主選單"><a href="#top">首頁</a><a href="#flight">航班</a><a href="#plan">行程</a><a href="#todo">待辦</a><a href="#stay">住宿</a><a href="#tax">退稅</a></nav>
+<main id="top">
+<div class="hero">
+<svg viewBox="0 0 360 230" role="img" aria-label="通天閣、電車與飛機的插圖">
+<g stroke="#3E3A39" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+<circle class="bob" cx="300" cy="54" r="24" fill="#F6D27A"/>
+<g class="drift"><path d="M24 70h70a14 14 0 0 0 0-28 18 18 0 0 0-34-4 16 16 0 0 0-36 32z" fill="#FFFCF6"/></g>
+<g class="drift2"><path d="M200 96h60a11 11 0 0 0 0-22 14 14 0 0 0-27-3 13 13 0 0 0-33 25z" fill="#FFFCF6"/></g>
+<g class="fly"><path d="M110 30l44 6 10-10 8 2-6 12 16 3-2 6-18-2-14 14-8-2 6-14-36-4z" fill="#F2A497"/></g>
+<path d="M-5 205q60-50 130-30t140 0 100 20v45H-5z" fill="#B9DAA5"/>
+<path d="M-5 220h370v10H-5z" fill="#F6D27A"/>
+<g>
+<path d="M214 192l12-62h12l12 62" fill="#FFFCF6"/>
+<path d="M222 160h24M219 176h30M226 130l16 30M238 130l-16 30M219 176l14-16 16 16" fill="none"/>
+<rect x="212" y="110" width="52" height="18" rx="6" fill="#F2A497"/>
+<path d="M226 110l11-30 11 30" fill="#A8D3E6"/>
+<path d="M237 80V58" fill="none"/>
+<circle cx="237" cy="55" r="5" fill="#F6D27A"/>
+<rect x="224" y="114" width="26" height="6" rx="3" fill="#FFFCF6" stroke-width="2"/>
+</g>
+<g class="train">
+<rect x="0" y="176" width="86" height="28" rx="12" fill="#A8D3E6"/>
+<rect x="8" y="182" width="16" height="12" rx="4" fill="#FFFCF6" stroke-width="2"/>
+<rect x="30" y="182" width="16" height="12" rx="4" fill="#FFFCF6" stroke-width="2"/>
+<rect x="52" y="182" width="16" height="12" rx="4" fill="#FFFCF6" stroke-width="2"/>
+<circle cx="20" cy="206" r="6" fill="#F6D27A"/><circle cx="66" cy="206" r="6" fill="#F6D27A"/>
+</g>
+<g transform="translate(40 150)"><circle cx="0" cy="0" r="14" fill="#F2A497"/><path d="M-12-8q12-14 24 0" fill="#FFFCF6"/><circle cx="-5" cy="2" r="1.5" fill="#3E3A39"/><circle cx="5" cy="2" r="1.5" fill="#3E3A39"/><path d="M-14 12h28v14h-28z" fill="#F6D27A"/></g>
+<g transform="translate(150 188)"><path d="M0 0v-26" fill="none"/><circle cx="0" cy="-34" r="14" fill="#B9DAA5"/><circle cx="-10" cy="-20" r="10" fill="#B9DAA5"/><circle cx="10" cy="-20" r="10" fill="#B9DAA5"/></g>
+</g>
+</svg>
+<div class="tx">
+<h1>大阪・神戶 七日小旅行</h1>
+<p class="sub">2026.11.03 – 11.09　芋頭 ・ 爸媽 ・ 豆子</p>
+<div class="cd" aria-live="polite"><div><b id="cd-d">--</b><span>天</span></div><div><b id="cd-h">--</b><span>小時</span></div><div><b id="cd-m">--</b><span>分鐘</span></div></div>
+<div class="cdn" id="cd-note"></div>
+</div>
+</div>
+
+<section id="flight"><h2>✈ 航班資訊</h2>
+<div class="fl">
+<div class="card" style="background:#fbe3de"><h3 style="background:var(--coral)">🍠 芋頭</h3>
+<div class="row"><span class="lab">去程</span><span class="tm">11/3　03:05 → 10:15</span><span class="fn">TR880　→ 關西機場</span></div>
+<div class="row"><span class="lab">回程</span><span class="tm">11/9　14:10 → 16:30</span><span class="fn">AK171　→ 高雄小港</span></div></div>
+<div class="card" style="background:#fdf1d3"><h3 style="background:var(--sun)">👨‍👩‍👧 爸媽</h3>
+<div class="row"><span class="lab">去程</span><span class="tm">11/3　06:55 → 10:40</span><span class="fn">IT284　→ 關西機場</span></div>
+<div class="row"><span class="lab">回程</span><span class="tm">11/9　14:10 → 16:30</span><span class="fn">AK171　→ 高雄小港</span></div></div>
+<div class="card" style="background:#e3f1f8"><h3 style="background:var(--sky)">🫘 豆子</h3>
+<div class="row"><span class="lab">去程</span><span class="tm">11/3　07:30 → 11:00</span><span class="fn">VZ566　→ 關西機場</span></div>
+<div class="row"><span class="lab">回程</span><span class="tm">11/9　14:55 → 17:15</span><span class="fn">GK055　→ 台北桃園</span></div></div>
+</div>
+
+</section>
+
+<section id="plan"><h2>🗓 每日行程</h2>
+<div class="tabs" id="tabs" role="tablist"></div>
+<div id="day" role="tabpanel"></div>
+</section>
+
+<section id="todo"><h2>✅ 出發前待辦</h2>
+<div class="card"><div class="prog"><i id="bar"></i></div><div id="pt" style="font-size:14px;margin-bottom:4px"></div><ul class="todo" id="todos"></ul></div>
+</section>
+
+<section id="stay"><h2>🏨 住宿資訊</h2>
+<div class="card hotel"><h3>Apartment Hotel 11 Shinsaibashi 7</h3>
+<p style="margin:6px 0 0;font-size:14px">位於心齋橋商圈，11/3 – 11/9 的大阪據點。步行就能逛心齋橋筋商店街、道頓堀。</p>
+<a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Apartment+Hotel+11+Shinsaibashi+7">在地圖上開啟 ↗</a></div>
+</section>
+<section id="tax"><h2>💴 退稅新制</h2>
+<div class="card" style="background:var(--sky)"><h3 style="font-size:19px">2026/11/1 起：先付後退</h3><p style="margin:6px 0 0;font-size:14px">你們 11/3 才出發，全程購物都適用新制：結帳時先付含稅價，出境前在機場完成海關確認，消費稅才會退回。購買日起 90 日內要帶出境。</p></div>
+<ol class="tl" style="margin-top:16px">
+<li><div class="t"><span class="n">① 結帳時辦登記</span><span class="tg walk">店內</span></div><div class="d">先付含稅價，請店員辦免稅登記並出示護照。資料要當天、在店裡完成，到機場才補不行。</div></li>
+<li><div class="t"><span class="n">② 收據與商品留好</span><span class="tg bus">旅途中</span></div><div class="d">免稅品與購物明細保管好，別先拆封使用，也別先寄走。</div></li>
+<li class="must"><div class="t"><span class="n">③ 託運前先辦手續</span><span class="must-b">必做</span><span class="tg jr">機場</span></div><div class="d">11/9 到關西機場第一航廈 4F 出境大廳，先找「免稅手續」自助機台掃描護照，再去託運行李。關西機場也能用 Visit Japan Web，在安檢區外的指定 Wi-Fi 區域線上辦理。</div></li>
+<li><div class="t"><span class="n">④ 海關可能抽查商品</span><span class="tg car">海關</span></div><div class="d">免稅品請放手提或放在容易取出的位置，不要先塞進托運行李。</div></li>
+<li><div class="t"><span class="n">⑤ 退款入帳</span><span class="tg metro">回台後</span></div><div class="d">確認通過後，由店家或退稅業者退到你登記時選的方式（信用卡、電子支付或現金）。</div></li>
+</ol>
+<div class="tip"><b>小提醒</b><ul><li>機台在 4F 的確切位置我查不到，請跟著機場「免稅手續」指標找。</li><li>AK171 與 GK055 的出發航廈請在出發前確認，兩個航廈的位置不同。</li><li>適用門檻與可退項目依店家與官方規定，結帳時問店員最準。</li><li>手續要排隊，建議比平常再早一點到機場。</li></ul></div>
+</section>
+<footer>🌸 旅途愉快・平安回家 🌸</footer>
+</main>
+
+<script>
+const D=[
+{d:"11/3 二",t:"抵達・臨空城・心齋橋",s:"行李先寄放，Outlet 逛完再進市區",l:[
+["關西機場第一航廈 1F 置物櫃寄放行李","walk","步行"],
+["臨空城 Outlet","metro","捷運",1,"逛完回機場取行李"],
+["回關西機場，搭機場巴士到飯店","bus","INNN 巴士"],
+["心齋橋商店街","walk","步行",1],
+["味乃家","walk","步行",0,"大阪名物明太子"],
+["寶可夢咖啡廳 心齋橋","walk","步行",1,"建議先預約"],
+["寶可夢中心 大阪店","walk","步行",1],
+["心齋橋 PARCO","walk","步行"],
+["HARBS 心齋橋 PARCO 店","walk","步行",0,"水果蛋糕收尾"]]},
+{d:"11/4 三",t:"堺・日本橋・難波",s:"一路逛到道頓堀夜景",l:[
+["大鳥大社","jr","電車",1],
+["木津批發商場","metro","捷運"],
+["Zero one 日本橋店","walk","步行"],
+["難波八阪神社","walk","步行",1,"超大獅子殿"],
+["月化粧 難波店","walk","步行"],
+["ALPEN 難波公園店","walk","步行"],
+["BEAMS 難波","walk","步行"],
+["藍瓶咖啡 心齋橋店","walk","步行"],
+["雞湯拉麵 銀座煮干店","walk","步行"],
+["無印良品 心齋橋 PARCO 店","walk","步行"],
+["唐吉訶德 道頓堀","walk","步行"],
+["道頓堀","walk","步行",1,"固力果跑跑人"],
+["一蘭拉麵 道頓堀","walk","步行"]]},
+{d:"11/5 四",t:"神戶一日散策",s:"異人館、麵包超人與港景",l:[
+["三宮站","jr","JR / 阪急"],
+["生田神社","walk","步行",1],
+["神戶北野異人館街","walk","步行",1],
+["北野天滿神社","walk","步行"],
+["神戶麵包超人兒童博物館","walk","步行",1],
+["神戶臨海樂園 (Umie)","walk","步行"],
+["星巴克 神戶美利堅公園店","walk","步行",1,"海邊的玻璃屋"],
+["神戶港","walk","步行"]]},
+{d:"11/6 五",t:"海遊館・立花通",s:"水族館日",l:[
+["海遊館","metro","捷運",1,"建議提前訂票"],
+["立花通","metro","捷運"],
+["cosme","walk","步行",0,"美妝採買"]]},
+{d:"11/7 六",t:"梅田散步",s:"茶屋町、神社與空中庭園",l:[
+["藍瓶咖啡 梅田茶屋町店","metro","捷運"],
+["綱敷天神社御旅社","walk","步行"],
+["露天神社（阿初天神）","walk","步行",1],
+["阪急百貨 梅田","walk","步行"],
+["cosme lucua 店","walk","步行"],
+["梅田藍天大廈 空中庭園展望台","walk","步行",1,"建議日落前上去"]]},
+{d:"11/8 日",t:"天王寺・新世界",s:"大阪最後一個完整的日子",l:[
+["通天閣","metro","捷運",1,"大阪地標"],
+["四天王寺","walk","步行",1],
+["阿倍野 Harukas 300 展望台","walk","步行",1],
+["天王寺 MIO","walk","步行"]]},
+{d:"11/9 一",t:"回家日",s:"包車前往關西機場",l:[
+["包車前往關西機場","car","包車",1,"先辦退稅手續，再託運行李"],
+["14:10 AK171 / 14:55 GK055 起飛","jr","航班",1,"別忘了退稅與伴手禮"]]}];
+const R={
+"關西機場第一航廈 1F 置物櫃寄放行李":[["💡","先看櫃子尺寸與費用；4F 出發層也有人工行李寄放"]],
+"臨空城 Outlet":[["🛍","運動與日系品牌值得先逛"],["🌇","靠海，逛累了可以到海邊走走"]],
+"回關西機場，搭機場巴士到飯店":[["💡","上車前先確認乘車處與班次，行李記得一起取回"]],
+"心齋橋商店街":[["🍡","邊走邊吃小點心，順便逛藥妝"],["🥟","551 蓬萊的豬肉包很有名"]],
+"味乃家":[["🐟","明太子是招牌，可以試吃後再買伴手禮"]],
+"寶可夢咖啡廳 心齋橋":[["🍰","皮卡丘造型甜點與飲品，拍照很可愛"],["💡","熱門，先預約"]],
+"寶可夢中心 大阪店":[["🎁","找大阪限定周邊當紀念"]],
+"心齋橋 PARCO":[["🏬","日系雜貨、動漫與服飾，一站逛完"]],
+"HARBS 心齋橋 PARCO 店":[["🍰","招牌水果千層蛋糕"]],
+"大鳥大社":[["🌿","參道安靜、綠意多，適合慢慢散步拍照"]],
+"木津批發商場":[["🍬","零食、飲料批發價，適合帶回家分送"]],
+"Zero one 日本橋店":[["🎮","日本橋是動漫電玩區，順便逛周邊店"]],
+"難波八阪神社":[["📸","巨大獅子殿，嘴巴張開的造型最好拍"]],
+"月化粧 難波店":[["🍮","大阪伴手禮點心，先買一份嘗鮮"]],
+"ALPEN 難波公園店":[["🎒","戶外與運動用品，日牌款式多"]],
+"BEAMS 難波":[["👕","日系潮流服飾，可挑限定款"]],
+"藍瓶咖啡 心齋橋":[["☕","拿鐵與手沖，配個小點心休息一下"]],
+"雞湯拉麵 銀座煮干店":[["🍜","煮干魚風味湯頭，喜歡濃郁鮮味的人別錯過"]],
+"無印良品 心齋橋 PARCO 店":[["🧴","日本限定食品與生活小物"]],
+"唐吉訶德 道頓堀":[["🎡","外面的摩天輪是拍照亮點"],["🍫","零食、藥妝、伴手禮一次買齊"]],
+"道頓堀":[["🐙","章魚燒是必吃，晚上看河岸霓虹更漂亮"],["📸","固力果招牌前合照"]],
+"一蘭拉麵 道頓堀":[["🍜","單人隔間座位，可自選濃淡與辣度"]],
+"三宮站":[["🍰","神戶是甜點之都，三宮周邊可找布丁或蛋糕"]],
+"生田神社":[["⛩","市區中的神社，可求結緣御守"]],
+"神戶北野異人館街":[["🏠","洋館建築群，坡道上散步拍照"],["☕","可找洋館改建的咖啡廳歇腳"]],
+"北野天滿神社":[["🌅","位在高處，可以眺望神戶市景"]],
+"神戶麵包超人兒童博物館":[["🍞","麵包超人造型麵包是亮點"],["👶","整體偏親子，也有可愛的拍照角落"]],
+"神戶臨海樂園 (Umie)":[["🎡","有摩天輪，可買點心邊逛邊吃"]],
+"星巴克 神戶美利堅公園店":[["🌊","玻璃屋面海，來杯飲料看港景"]],
+"神戶港":[["🗼","紅色港塔是地標，傍晚燈光最美"]],
+"海遊館":[["🦈","大水槽的鯨鯊和水母展區是重點"],["🛍","出口有可愛的海洋伴手禮"]],
+"立花通":[["🛍","逛逛潮流與生活小店"]],
+"cosme":[["💄","日本美妝人氣榜，逛前先列清單"]],
+"藍瓶咖啡 梅田茶屋町":[["☕","茶屋町一帶的小休息站"]],
+"綱敷天神社御旅所":[["⛩","梅田市區裡的小神社，順路拜拜"]],
+"露天神社（阿初天神）":[["💘","以戀愛結緣聞名，御守很可愛"]],
+"阪急百貨 梅田":[["🍰","地下美食區甜點與伴手禮很齊全"]],
+"cosme lucua 店":[["💄","可再補買前面漏掉的美妝"]],
+"梅田藍天大廈 空中庭園展望台":[["🌇","日落前上去，一次看白天到夜景"]],
+"通天閣":[["🍢","新世界一帶的串炸是名物"],["🙌","摸摸 Billiken 的腳祈福"]],
+"四天王寺":[["🙏","古老寺院，氣氛安靜"]],
+"阿倍野 Harukas 300 展望台":[["🌃","300 公尺高空景色很廣，天氣好最值得"]],
+"天王寺 MIO":[["🛍","補買雜貨與服飾，離車站很近"]],
+"包車前往關西機場":[["🚗","行李多就提早出發，留足時間辦退稅"]],
+"14:10 AK171 / 14:55 GK055 起飛":[["🎁","機場免稅店最後採買伴手禮"]]
+};
+const S={
+"關西機場第一航廈 1F 置物櫃寄放行李":"關西機場站","臨空城 Outlet":"臨空城站",
+"心齋橋商店街":"心齋橋站","味乃家":"心齋橋站","寶可夢咖啡廳 心齋橋":"心齋橋站","寶可夢中心 大阪店":"心齋橋站","心齋橋 PARCO":"心齋橋站","HARBS 心齋橋 PARCO 店":"心齋橋站",
+"大鳥大社":"JR 鳳站","木津批發商場":"大國町站","Zero one 日本橋店":"日本橋站","難波八阪神社":"大國町站",
+"月化粧 難波店":"難波站","ALPEN 難波公園店":"難波站","BEAMS 難波":"難波站","藍瓶咖啡 心齋橋":"心齋橋站","無印良品 心齋橋 PARCO 店":"心齋橋站",
+"唐吉訶德 道頓堀":"難波站","道頓堀":"難波站","一蘭拉麵 道頓堀":"難波站",
+"三宮站":"三宮站","生田神社":"三宮站","神戶北野異人館街":"三宮站","北野天滿神社":"三宮站",
+"神戶麵包超人兒童博物館":"神戶站 / 港元町站","神戶臨海樂園 (Umie)":"神戶站 / 港元町站","星巴克 神戶美利堅公園店":"元町站","神戶港":"元町站 / 三宮站",
+"海遊館":"大阪港站","立花通":"四橋站",
+"藍瓶咖啡 梅田茶屋町":"梅田站","綱敷天神社御旅所":"梅田站","露天神社（阿初天神）":"東梅田站","阪急百貨 梅田":"梅田站","cosme lucua 店":"大阪站","梅田藍天大廈 空中庭園展望台":"大阪站",
+"通天閣":"惠美須町站","四天王寺":"四天王寺前夕陽丘站","阿倍野 Harukas 300 展望台":"天王寺站","天王寺 MIO":"天王寺站"
+};
+const T=["護照（效期 6 個月以上）","Visit Japan Web 入境登錄","eSIM / 網卡","交通卡（ICOCA）","日幣現金","行動電源（隨身）","寶可夢咖啡廳預約","海遊館車票確認","包車預約確認","伴手禮空間留好","結帳時確認店家有辦退稅登記","收據與免稅品留好、先別拆封","11/9 託運行李前先辦退稅手續"];
+const $=s=>document.querySelector(s);
+const tabs=$("#tabs");
+D.forEach((x,i)=>{const b=document.createElement("button");b.className="tab";b.setAttribute("role","tab");b.innerHTML=`<small>Day ${i+1}</small><b>${x.d}</b>`;b.onclick=()=>show(i);tabs.appendChild(b)});
+function show(i){
+[...tabs.children].forEach((b,k)=>b.setAttribute("aria-selected",k===i));
+const x=D[i];
+$("#day").innerHTML=`<div class="dh"><h3>Day ${i+1}・${x.t}</h3><p>${x.s}</p></div><ol class="tl">`+x.l.map((p,k)=>`<li class="${p[3]?"must":""}" style="animation-delay:${k*60}ms"><div class="t"><span class="n">${p[0]}</span>${p[3]?'<span class="must-b">必去</span>':""}</div><div class="t" style="margin-top:2px"><span class="tg ${p[1]}">${p[2]}</span>${S[p[0]]?`<span class="tg st">🚇 ${S[p[0]]}</span>`:""}</div>${p[4]?`<div class="d">${p[4]}</div>`:""}${R[p[0]]?`<div class="rec">${R[p[0]].map(r=>`<div><b>${r[0]}</b>${r[1]}</div>`).join("")}</div>`:""}</li>`).join("")+"</ol>";
+}
+show(0);
+let st={};try{st=JSON.parse(localStorage.getItem("trip-todo")||"{}")}catch(e){}
+const ul=$("#todos");
+T.forEach((t,i)=>{const li=document.createElement("li");li.innerHTML=`<label><input type="checkbox" ${st[i]?"checked":""}><span>${t}</span></label>`;li.querySelector("input").onchange=e=>{st[i]=e.target.checked;try{localStorage.setItem("trip-todo",JSON.stringify(st))}catch(_){}prog()};ul.appendChild(li)});
+function prog(){const n=Object.values(st).filter(Boolean).length;$("#bar").style.width=n/T.length*100+"%";$("#pt").textContent=`已完成 ${n} / ${T.length}`}
+prog();
+function tick(){
+const go=new Date("2026-11-03T03:05:00+08:00"),end=new Date("2026-11-09T23:59:00+08:00"),now=new Date(),df=go-now;
+if(df>0){const m=Math.floor(df/6e4);$("#cd-d").textContent=Math.floor(m/1440);$("#cd-h").textContent=Math.floor(m%1440/60);$("#cd-m").textContent=m%60;$("#cd-note").textContent="距離最早班機（芋頭 TR880）起飛"}
+else{["#cd-d","#cd-h","#cd-m"].forEach(s=>$(s).textContent="0");$("#cd-note").textContent=now<end?"旅程進行中，玩得開心！":"旅程結束，期待下次出發～"}}
+tick();setInterval(tick,30000);
+</script>
+</body>
+</html>
