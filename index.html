@@ -17,7 +17,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 nav{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:20;background:var(--paper);border-bottom:3px solid var(--ink);display:flex;gap:6px;padding:8px 10px;overflow-x:auto;justify-content:center}
 nav a{flex:none;color:var(--ink);text-decoration:none;border:3px solid var(--ink);border-radius:999px;padding:2px 14px;font-size:15px;background:var(--paper);transition:transform .2s}
 nav a:nth-child(1){background:var(--coral)}nav a:nth-child(2){background:var(--sun)}nav a:nth-child(3){background:var(--sky)}nav a:nth-child(4){background:var(--green)}nav a:nth-child(5){background:var(--coral)}
-nav a:nth-child(6){background:var(--sun)}nav a:active{transform:scale(.92)}
+nav a:nth-child(6){background:var(--sun)}nav a:nth-child(7){background:var(--green)}nav a:active{transform:scale(.92)}
 main{max-width:720px;margin:0 auto;padding:78px 14px 40px}
 section{margin-top:34px}
 h1,h2,h3{margin:0}
@@ -88,7 +88,7 @@ footer{text-align:center;font-size:13px;padding:10px 0 24px}
 </style>
 </head>
 <body>
-<nav aria-label="主選單"><a href="#top">首頁</a><a href="#flight">航班</a><a href="#plan">行程</a><a href="#todo">待辦</a><a href="#stay">住宿</a><a href="#tax">退稅</a></nav>
+<nav aria-label="主選單"><a href="#top">首頁</a><a href="#flight">航班</a><a href="#plan">行程</a><a href="#todo">待辦</a><a href="#stay">住宿</a><a href="#tax">退稅</a><a href="#coupon">優惠券</a></nav>
 <main id="top">
 <div class="hero">
 <svg viewBox="0 0 360 230" role="img" aria-label="通天閣、電車與飛機的插圖">
@@ -166,6 +166,12 @@ footer{text-align:center;font-size:13px;padding:10px 0 24px}
 <li><div class="t"><span class="n">⑤ 退款入帳</span><span class="tg metro">回台後</span></div><div class="d">確認通過後，由店家或退稅業者退到你登記時選的方式（信用卡、電子支付或現金）。</div></li>
 </ol>
 <div class="tip"><b>小提醒</b><ul><li>機台在 4F 的確切位置我查不到，請跟著機場「免稅手續」指標找。</li><li>AK171 與 GK055 的出發航廈請在出發前確認，兩個航廈的位置不同。</li><li>適用門檻與可退項目依店家與官方規定，結帳時問店員最準。</li><li>手續要排隊，建議比平常再早一點到機場。</li></ul></div>
+</section>
+<section id="coupon"><h2>🎟 優惠券備註</h2>
+<div class="card" style="background:var(--green)"><h3 style="font-size:19px">日本優惠券懶人包</h3>
+<p style="margin:6px 0 0;font-size:14px">出發前或購物前可先查看藥妝、百貨、電器與免稅店等優惠。優惠內容、適用店家與期限可能變動，結帳前記得確認使用條件。</p>
+<a class="btn" target="_blank" rel="noopener" href="https://alinchuang.my.canva.site/">開啟優惠券整理頁 ↗</a>
+<p style="margin:6px 0 0;font-size:12px">原頁面標示更新：2026/10/23</p></div>
 </section>
 <footer>🌸 旅途愉快・平安回家 🌸</footer>
 </main>
